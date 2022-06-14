@@ -1,7 +1,7 @@
 {
   "name": "translate-webvtt",
   "description": "Uses Azure Translate service to translate WEBVTT English subtitles to other languages",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "repository": {

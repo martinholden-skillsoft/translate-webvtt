@@ -1,0 +1,45 @@
+{
+  "name": "translate-webvtt",
+  "description": "Uses Azure Translate service to translate WEBVTT English subtitles to other languages",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/martinholden-skillsoft/translate-webvtt.git"
+  },
+  "author": {
+    "name": "Martin Holden",
+    "email": "12408585+martinholden-skillsoft@users.noreply.github.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "lint": "eslint **/*.js",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags && npm run changelog && git push ",
+    "postinstall": "",
+    "changelog": "rimraf CHANGELOG.md && auto-changelog --template keepachangelog && git add . && git commit . -m changelog && git push"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "consola": "^2.15.3",
+    "dotenv": "^16.0.1",
+    "glob": "^8.0.3",
+    "lodash": "^4.17.21",
+    "node-webvtt": "^1.9.4",
+    "uuid": "^8.3.2",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.2",
+    "auto-changelog": "^2.3.0",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2"
+  }
+}
